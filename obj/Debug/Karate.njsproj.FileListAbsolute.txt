@@ -1,0 +1,3 @@
+C:\Trabajo\Visual\HTML\Prueba6021\Karate\obj\Debug\Karate.njsproj.AssemblyReference.cache
+C:\Trabajo\Visual\HTML\Prueba6021\Karate\obj\Debug\Karate.njsproj.CoreCompileInputs.cache
+C:\Trabajo\Visual\HTML\Prueba6021\Karate\bin\Microsoft.NodejsTools.WebRole.dll

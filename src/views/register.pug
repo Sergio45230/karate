@@ -1,0 +1,57 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Montaje CBA - Registro
+  // BOOTSTRAP STYLES
+  link(href='../css/bootstrap4/bootstrap.min.css' rel='stylesheet')
+  link(href='../css/login.css' rel='stylesheet')
+  // FONTAWESOME STYLES
+  link(href='../css/font-awesome.css' rel='stylesheet')
+
+body
+  .container
+    .d-flex.justify-content-center.h-100
+      .card#userReg
+        .card-header
+          .row
+            .col-6
+              h3 Nuevo Deportista
+            .col-6
+              button#closeForm.btn.btn-rounded.btn-outline-warning.mt-0.mr-1.float-right X
+        .card-body
+          form(action='new' method='POST')
+            .form-row
+              .form-group.col
+                input.form-control(type = 'text' placeholder = 'Nombre' name = 'inputName' required='')
+                //input.form-control(type = 'text' placeholder = 'Fecha de Nacimiento' name = 'inputDayBrith' required='')
+                label(for='start') Fecha de Nacimiento:
+                    input#start(type='date' name='inputDayBrith' value='2018-07-22' min='1950-01-01' max='')
+                input.form-control(type = 'number' placeholder = 'Documento' name = 'inputDni' required='')
+              .form-group.col
+                input.form-control(type = 'text' placeholder = 'Apellido' name = 'inputLastName' required='')
+                input.form-control(type = 'text' placeholder = 'E-Mail' name = 'inputEmail' required='')
+            .form-row.mt-1
+              .form-group.col
+                input.form-control(type = 'text' placeholder = 'Graduacion' name = 'inputGrad' required='')
+              .form-group.col
+                input.form-control(type = 'text' placeholder = 'Estilo' name = 'inputStyle' required='')
+            .form-row.mt-1
+              .form-group.col
+                input.form-control(type = 'text' placeholder = 'Dojo' name = 'inputDojo' required='')
+              .form-group.col
+                input.form-control(type = 'text' placeholder = 'Club / Municipio' name = 'inputClubTown' required='')
+            .form-row.mt-1
+              .form-group.col
+                input.form-control(type = 'text' placeholder = 'Usuario' name = 'inputUser' required='')
+              .form-group.col
+                input.form-control(type = 'password' placeholder = 'Clave' name = 'inputPass' required='')
+            .form-row.mt-5
+              .form-group.col
+              .form-group.col
+                input.btn.float-right.login_btn.btn-block(type='submit' value='Enviar')
+
+script.
+  document.getElementById('closeForm').onclick = function(){
+    window.location = '/';
+  };

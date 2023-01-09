@@ -1,0 +1,208 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Federacion Cordobesa de Karate
+        // BOOTSTRAP STYLES
+        link(href='../css/bootstrap4/bootstrap.min.css' rel='stylesheet')
+        // FONTAWESOME STYLES
+        link(href='../css/font-awesome.css' rel='stylesheet')
+        // Custom Styles
+        link(rel="stylesheet", href="css/home/plu_home.css")
+        style.
+            #tbl{
+                position: absolute;
+                min-height: 10%;
+                max-height:80%;
+                width: auto;
+                overflow-y: scroll;
+                }
+            th{
+                /*text-align: center;*/
+                position: sticky;
+                top: 0px;
+                padding: 5px;
+                background-color: #FFC312;
+                color: black;
+                z-index: 1;
+                }
+            .centered{
+                text-align: center;
+                }
+            #form{
+                position: absolute;
+                top: 10%;
+                left: 20%;
+                width: 60%;
+                height: 600px;
+                min-height: 600px;
+                background-color: rgba(0, 0, 0, 0.8);
+                /*box-shadow: rgba(0, 0, 0, 0.2) 10px 10px;*/
+                padding-left: 10px;
+                margin: 0px;
+                padding: 0px;
+                border-radius: 20px;
+                border-color: rgb(170, 170, 170);
+                border-width: 1px;
+                /*display: flex;*/
+                /*align-items: center;*/
+                /*justify-content: center;*/
+                color: rgb(255, 255, 255);
+                z-index: 100;
+                visibility: hidden;
+            }
+
+            /* width */
+            ::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1; 
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #888; 
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555; 
+            }
+
+
+    body#bdy
+        //NAVBAR  **********************************************************************************************
+        div.container-fluid.mt-1.mx-auto
+            .row
+                .col-md-12
+                    nav#mnu.navbar.navbar-expand-lg.navbar-dark.bg-dark.my-0.py-0
+                        a.navbar-brand(href='#')
+                            div.d-inline-flex
+                                img.my-0.py-0(src="../imgs/Logo_FCK-removebg-preview.png" height='40')
+                                h5.ml-2.mt-1.p-1 Federacion Cordobesa de Karate - Administracion de Usuarios
+                        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                            span.navbar-toggler-icon
+                        #navbarSupportedContent.collapse.navbar-collapse
+                            ul.navbar-nav.mr-auto
+                                li.nav-item.d-inline-flex
+                                    a.nav-link(href='/home' tabindex='-1' aria-disabled='true') SALIR
+                                li.nav-item.dropdown
+                                    a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') 
+                                        | Usuarios
+                                    .dropdown-menu(aria-labelledby='navbarDropdown')
+                                        a(href='/users/reg' style='color: black') Nuevo Usuario.
+                                        a.dropdown-item(href='#')= 'Option 2'
+        .container-fluid.mx-auto
+            //label(for="search").text-light Buscar en tabla
+            .row.mx-auto(style='background-color: black;')
+                .col-2
+                    h5.mt-2.mx-3(style='color: white;') LISTA DE USUARIOS
+                .col-4
+                    div.form-inline.my-1
+                        input#search.form-control(type='text' placeholder='Escriba para buscar', style='width: 90%')
+                        button#clear_search.btn.btn-rounded.btn-outline-warning X
+        #tbl.container-fluid
+            table#usersTbl.table.table-striped.table-hover.mx-auto.table-dark
+                thead
+                    tr
+                        th(style='width: 2%') #
+                        th(style='width: 5%') Nombre
+                        th(style='width: 10%') Apellido
+                        th(style='width: 10%') Email
+                        th(style='width: 10%') Usuario
+                        th(style='width: 3%') Edad
+                        th(style='width: 10%') Documento
+                        th(style='width: 10%') Fecha de Nac
+                        th(style='width: 10%') Graduacion
+                        th(style='width: 10%') Estilo
+                        th(style='width: 3%') Dojo
+                        th(style='width: 5%') Club/Municipio
+                        th(style='width: 5%') Ultimo Acceso
+                tbody       
+                    -for(var i = 0; i < userQuantity; i++)
+                        tr
+                            td(style='width: 2%')= users[i].userID
+                            td(style='width: 5%')= users[i].name
+                            td(style='width: 10%')= users[i].lastName
+                            td(style='width: 18%')= users[i].email
+                            td(style='width: 10%')= users[i].user
+                            td(style='width: 3%')= users[i].years
+                            td(style='width: 10%')= users[i].dni
+                            td(style='width: 10%')= users[i].dayBrith
+                            td(style='width: 10%')= users[i].grad
+                            td(style='width: 10%')= users[i].style
+                            td(style='width: 3%')= users[i].dojo
+                            td(style='width: 5%')= users[i].clubTown
+                            td(style='width: 7%')= users[i].lastAccess
+    #form
+        .row.mb-5
+            .col-md-2
+                h4.ml-4.mt-2 EDITAR USUARIO
+            .col-md-7.border-bottom
+                h4#accFliterShow.mt-2
+            .col-md-2.border-bottom
+            .col-md-1
+                button#close.btn.btn-rounded.btn-outline-light.float-right.mr-4.mt-2 X
+        .container
+            .col-md-12
+                form(action='update_info' method='POST', name='userForm')
+                    .form-row
+                        .form-group.col-2
+                            label(for='inputID') UserID
+                            input.form-control(type = 'text' placeholder = 'ID' name = 'inputID' required='' disabled='')
+                        .form-group.col
+                            label(for='inputName') Nombre
+                            input.form-control(type = 'text' placeholder = 'Nombre' name = 'inputName' required='')
+                        .form-group.col
+                            label(for='inputLastName') Apellido
+                            input.form-control(type = 'text' placeholder = 'Apellido' name = 'inputLastName' required='' disabled='')
+                    .form-row.mt-2
+                        .form-group.col
+                            label(for='inputEmail') E-mail
+                            input.form-control(type = 'email' placeholder = 'E-mail' name = 'inputEmail' required='')
+                        .form-group.col
+                            label(for='inputUser') Usuario
+                            input.form-control(type = 'text' placeholder = 'Usuario' name = 'inputUser' required='' disabled='') 
+                        .form-group.col
+                            label(for='inputPass') Contrasena
+                            input.form-control(type = 'text' placeholder = '' name = 'inputPass' required='' disabled='')
+                        .form-group.col
+                            label(for='inputYears') Edad
+                            input.form-control(type = 'number' placeholder = 'Edad' name = 'inputYears' required='' disabled='')
+                    .form-row.mt-2
+                        .form-group.col
+                            label(for='inputDni') Documento
+                            input.form-control(type = 'text' placeholder = 'DNI' name = 'inputDni' required='' disabled='')
+                        .form-group.col
+                            label(for='inputDayBrith') Fecha de Nacimiento
+                            input.form-control(type = 'text' placeholder = 'Fecha de Nacimiento' name = 'inputDayBrith' required='' disabled='')
+                        .form-group.col
+                            label(for='inputGrad') Graduacion
+                            input.form-control(type = 'text' placeholder = 'Graduacion' name = 'inputGrad' required='')
+                    .form-row.mt-2
+                        .form-group.col
+                            label(for='inputStyle') Estilo
+                            input.form-control(type = 'text' placeholder = 'Estilo' name = 'inputStyle' required='')
+                        .form-group.col
+                            label(for='inputDojo') Dojo
+                            input.form-control(type = 'text' placeholder = 'Dojo' name = 'inputDojo' required='')
+                        .form-group.col
+                            label(for='inputClubTown') Club / Municipio
+                            input.form-control(type = 'text' placeholder = 'Club/Municipio' name = 'inputClubTown' required='')
+                    .form-row.mt-0
+                        .form-group.col
+                            button#deleteBtn.btn.btn-outline-danger.mt-3 Delete User
+                        .form-group.col
+                            input#saveBtn.btn.float-right.btn-block.btn-outline-warning.mt-3(type='submit' value='Save')
+               
+
+// JQUERY SCRIPTS
+script(src='../js/jquery-3.6.0.min.js')
+// BOOTSTRAP SCRIPTS
+script(src='../js/bootstrap4/bootstrap.bundle.min.js')
+script(src="../js/user_admin/index.js") 

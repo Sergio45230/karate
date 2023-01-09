@@ -1,0 +1,231 @@
+#bdy{
+    /*overflow-y: hidden;*/
+    background-color: rgb(213, 213, 213);
+}
+
+#loadBanner{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%;
+    height: 10%;
+    background-color: #FFC312;
+    box-shadow: rgb(0, 0, 0, 0.4) 10px 10px;
+    padding-left: 10px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    z-index: 100;
+    /*visibility: hidden;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+@keyframes blinker {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+}
+.blink{
+      text-decoration: blink;
+      animation-name: blinker;
+      animation-duration: 0.3s;
+      animation-iteration-count:infinite;
+      animation-timing-function:ease-in-out;
+      animation-direction: alternate;
+}
+
+
+/*  Table DIV */
+
+#tbl{
+    position: absolute;
+    min-height: 10%;
+    /* max-height: 55%; */ 
+    width: auto;
+    overflow-y: scroll;
+    /*font-size: medium;*/
+}
+
+th{
+    text-align: center;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/*
+td{
+    padding: 2px;
+    background-color: rgb(55, 55, 55) ;
+    color:rgb(240, 240, 240);
+    border-color: rgba(65, 60, 75, 1);
+    border-width: 2px;
+}
+
+*/
+
+table tr th {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+td {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .sorting {
+    background-color: #FFC312;
+    color: black;
+  }
+  
+  .asc:after {
+    content: ' ↑';
+  }
+  
+  .desc:after {
+    content: " ↓";
+  }
+
+  .footerColor {
+    background-color: rgba(0, 0, 0, 0.768);
+  }
+
+  #updateText{
+    color: rgba(0, 255, 21, 0.213);
+  }
+
+  #editForm{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 60%;
+    height: 600px;
+    min-height: 600px;
+    background-color: rgba(46, 46, 46, 0.97);
+    box-shadow: rgba(0, 0, 0, 0.4) 20px 20px;
+    padding-left: 10px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 20px;
+    border-color: rgb(170, 170, 170);
+    border-width: 1px;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    color: rgb(255, 255, 255);
+    z-index: 120;
+    visibility: hidden;
+}
+
+textarea {
+  resize: none;
+}
+
+.jrow{
+  background-color: rgb(64, 87, 65);
+}
+
+#acc{
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 60%;
+  height: 600px;
+  min-height: 600px;
+  background-color: rgba(46, 46, 46, 0.97);
+  box-shadow: rgba(0, 0, 0, 0.4) 15px 15px;
+  padding-left: 10px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 20px;
+  border-color: rgb(170, 170, 170);
+  border-width: 1px;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  color: rgb(255, 255, 255);
+  z-index: 50;
+  visibility: hidden;
+
+}
+
+#divAccTbl{
+  position: absolute;
+  max-height: 70%;
+  height: 70%;
+  width: 95%;
+  overflow-y: scroll;
+
+}
+
+#accTbl{
+  color: white;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+#chartDiv{
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  width: 86%;
+  height: 600px;
+  min-height: 600px;
+  background-color: rgba(46, 46, 46, 0.97);
+  box-shadow: rgba(0, 0, 0, 0.4) 15px 15px;
+  padding-left: 10px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 20px;
+  border-color: rgb(170, 170, 170);
+  border-width: 1px;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  color: rgb(255, 255, 255);
+  z-index: 50;
+  visibility: hidden;
+
+}
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}

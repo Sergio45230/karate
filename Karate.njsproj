@@ -1,0 +1,200 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Karate</Name>
+    <RootNamespace>Karate</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>1c556b1b-de8a-447d-b594-f85059690c09</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="src\dateAndTime.js" />
+    <Content Include="src\index.js" />
+    <Content Include="src\public\css\bootstrap4\bootstrap-grid.css" />
+    <Content Include="src\public\css\bootstrap4\bootstrap-grid.css.map" />
+    <Content Include="src\public\css\bootstrap4\bootstrap-grid.min.css" />
+    <Content Include="src\public\css\bootstrap4\bootstrap-grid.min.css.map" />
+    <Content Include="src\public\css\bootstrap4\bootstrap-reboot.css" />
+    <Content Include="src\public\css\bootstrap4\bootstrap-reboot.css.map" />
+    <Content Include="src\public\css\bootstrap4\bootstrap-reboot.min.css" />
+    <Content Include="src\public\css\bootstrap4\bootstrap-reboot.min.css.map" />
+    <Content Include="src\public\css\bootstrap4\bootstrap.css" />
+    <Content Include="src\public\css\bootstrap4\bootstrap.css.map" />
+    <Content Include="src\public\css\bootstrap4\bootstrap.min.css" />
+    <Content Include="src\public\css\bootstrap4\bootstrap.min.css.map" />
+    <Content Include="src\public\css\font-awesome.css" />
+    <Content Include="src\public\css\home\plu_home.css" />
+    <Content Include="src\public\css\login.css" />
+    <Content Include="src\public\font-awesome\fonts\fontawesome-webfontba72.eot" />
+    <Content Include="src\public\font-awesome\fonts\fontawesome-webfontba72.svg" />
+    <Content Include="src\public\font-awesome\fonts\fontawesome-webfontba72.ttf" />
+    <Content Include="src\public\font-awesome\fonts\fontawesome-webfontba72.woff" />
+    <Content Include="src\public\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="src\public\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="src\public\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="src\public\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="src\public\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="src\public\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="src\public\imgs\1.png" />
+    <Content Include="src\public\imgs\2.png" />
+    <Content Include="src\public\imgs\3.png" />
+    <Content Include="src\public\imgs\4.png" />
+    <Content Include="src\public\imgs\find_user.png" />
+    <Content Include="src\public\imgs\Logo_FCK-removebg-preview.png" />
+    <Content Include="src\public\js\bootstrap4\bootstrap.bundle.js" />
+    <Content Include="src\public\js\bootstrap4\bootstrap.bundle.js.map" />
+    <Content Include="src\public\js\bootstrap4\bootstrap.bundle.min.js" />
+    <Content Include="src\public\js\bootstrap4\bootstrap.bundle.min.js.map" />
+    <Content Include="src\public\js\bootstrap4\bootstrap.js" />
+    <Content Include="src\public\js\bootstrap4\bootstrap.js.map" />
+    <Content Include="src\public\js\bootstrap4\bootstrap.min.js" />
+    <Content Include="src\public\js\bootstrap4\bootstrap.min.js.map" />
+    <Content Include="src\public\js\home\acc.js" />
+    <Content Include="src\public\js\home\backend_if.js" />
+    <Content Include="src\public\js\home\date_time.js" />
+    <Content Include="src\public\js\home\export2excel.js" />
+    <Content Include="src\public\js\home\filters.js" />
+    <Content Include="src\public\js\home\html_table_manager.js" />
+    <Content Include="src\public\js\home\main.js" />
+    <Content Include="src\public\js\home\ui.js" />
+    <Content Include="src\public\js\jquery-3.6.0.min.js" />
+    <Content Include="src\public\js\lines_st.js" />
+    <Content Include="src\public\js\timeline\apexcharts\apexcharts.amd.js" />
+    <Content Include="src\public\js\timeline\apexcharts\apexcharts.amd.js.LICENSE.txt" />
+    <Content Include="src\public\js\timeline\apexcharts\apexcharts.common.js" />
+    <Content Include="src\public\js\timeline\apexcharts\apexcharts.css" />
+    <Content Include="src\public\js\timeline\apexcharts\apexcharts.esm.js" />
+    <Content Include="src\public\js\timeline\apexcharts\apexcharts.js" />
+    <Content Include="src\public\js\timeline\apexcharts\apexcharts.min.js" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\ca.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\cs.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\de.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\el.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\en.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\es.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\fi.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\fr.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\he.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\hi.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\hr.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\hy.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\id.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\it.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\ja.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\ka.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\ko.js" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\ko.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\lt.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\nb.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\nl.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\pl.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\pt-br.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\pt.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\rs.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\ru.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\se.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\sk.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\sl.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\sq.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\th.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\tr.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\ua.json" />
+    <Content Include="src\public\js\timeline\apexcharts\locales\zh-cn.json" />
+    <Content Include="src\public\js\timeline\timeline.js" />
+    <Content Include="src\public\js\users\return.js" />
+    <Content Include="src\public\js\user_admin\index.js" />
+    <Content Include="src\router.js" />
+    <Content Include="src\user_db\user_db.json" />
+    <Content Include="src\user_db\user_db_JSON.bak" />
+    <Content Include="src\user_manager.js" />
+    <Content Include="src\user_router.js" />
+    <Content Include="src\views\login.pug" />
+    <Content Include="src\views\register.pug" />
+    <Content Include="src\views\users_admin.pug" />
+    <Content Include="src\webserver.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\imgs\" />
+    <Folder Include="src\public\" />
+    <Folder Include="src\public\css\" />
+    <Folder Include="src\public\css\bootstrap4\" />
+    <Folder Include="src\public\css\home\" />
+    <Folder Include="src\public\font-awesome\" />
+    <Folder Include="src\public\font-awesome\fonts\" />
+    <Folder Include="src\public\fonts\" />
+    <Folder Include="src\public\imgs\" />
+    <Folder Include="src\public\js\" />
+    <Folder Include="src\public\js\bootstrap4\" />
+    <Folder Include="src\public\js\home\" />
+    <Folder Include="src\public\js\timeline\" />
+    <Folder Include="src\public\js\timeline\apexcharts\" />
+    <Folder Include="src\public\js\timeline\apexcharts\locales\" />
+    <Folder Include="src\public\js\users\" />
+    <Folder Include="src\public\js\user_admin\" />
+    <Folder Include="src\user_db\" />
+    <Folder Include="src\views\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
